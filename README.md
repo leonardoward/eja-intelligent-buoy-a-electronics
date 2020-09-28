@@ -4,13 +4,15 @@ EJA Intelligent Buoy A - Electronic Design - 2020 Hackaday Dream Team Challenge 
 
 This repository contains the KiCad design for the PCB of the Intelligent Buoy A. It also contains the 3D models used to visualize the design in the KiCad 3D viewer.
 
+![alt text](./img/PCB_Buoy_A.jpg "Components")
+
 ## Main Components ##
 
 ![alt text](./img/Components_Buoy_3.jpg "Components")
 
 ## Schematic ##
 
-![alt text](./img/Schematic_Buoy_A.png" "Schematic")
+![alt text](./img/Schematic_Buoy_A.png "Schematic")
 
 ## PCB Layout ##
 
