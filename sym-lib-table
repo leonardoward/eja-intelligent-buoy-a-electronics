@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name ESP32-DEVKITC-32D)(type Legacy)(uri ${KIPRJMOD}/Symbols/ESP32-DEVKITC-32D.lib)(options "")(descr ""))
+  (lib (name RFM95W_Board)(type Legacy)(uri ${KIPRJMOD}/Symbols/RFM95W_Board.lib)(options "")(descr ""))
+  (lib (name Ultimate_GPS)(type Legacy)(uri ${KIPRJMOD}/Symbols/Ultimate_GPS.lib)(options "")(descr ""))
+  (lib (name SIM7600CE-T)(type Legacy)(uri ${KIPRJMOD}/Symbols/SIM7600CE-T.lib)(options "")(descr ""))
+  (lib (name TB6612FNG)(type Legacy)(uri ${KIPRJMOD}/Symbols/TB6612FNG.lib)(options "")(descr ""))
+)
