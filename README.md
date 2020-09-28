@@ -10,7 +10,7 @@ This repository contains the KiCad design for the PCB of the Intelligent Buoy A.
 
 ## Main Components ##
 
-![alt text](./img/Components_Buoy_3.jpg "Components")
+![alt text](./img/Components_Buoy_4.jpg "Components")
 
 ## Schematic ##
 
