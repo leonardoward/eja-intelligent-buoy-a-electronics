@@ -110,3 +110,7 @@ The board was designed to handle 2 different types of motors, those are:
 ![alt text](./Wiring_Diagrams/Wiring_Buoy_WithGSM_04_wired.png "DC Motor")
 
 [For more information about the wiring diagrams and the project visit the following log.](https://hackaday.io/project/173457/log/182856-buoy-a-v10-wiring-diagrams)
+
+## Future improvements ##
+
+[For more information about the recommended future improvements for the electronic design visit the following log.](https://hackaday.io/project/173457/log/183807-future-improvements-pcb-design)
