@@ -1,6 +1,8 @@
 # EJA Intelligent Buoy A - Electronic Design
 
-EJA Intelligent Buoy A - Electronic Design - 2020 Hackaday Dream Team Challenge for Conservation X Labs.
+EJA Intelligent Buoy A - Electronic Design - [2020 Hackaday Dream Team Challenge for Conservation X Labs](https://hackaday.io/project/173457-2020-hdp-dream-team-conservation-x-labs).
+
+Buoy A is a 141.73 mm x 54.86 mm PCB that integrates 5 main modules (ESP32, LoRa, GPS, Motor Driver and GSM/GPRS).
 
 This repository contains the KiCad design for the PCB of the Intelligent Buoy A. It also contains the 3D models used to visualize the design in the KiCad 3D viewer.
 
@@ -12,9 +14,19 @@ This repository contains the KiCad design for the PCB of the Intelligent Buoy A.
 
 ![alt text](./img/Components_Buoy_4.jpg "Components")
 
+Sources:
+
+- [ESP32-DEVKITC-32D](https://www.digikey.com/product-detail/es/espressif-systems/ESP32-DEVKITC-32D/1965-1000-ND/9356990)
+- [RFM95W LoRa Radio](https://www.digikey.com/product-detail/es/adafruit-industries-llc/3072/1528-1667-ND/6005357)
+- [TB6612FNG MOTOR DRIVER BOARD](https://www.digikey.com/product-detail/es/sparkfun-electronics/ROB-14450/1568-1755-ND/7915576)
+- [Adafruit Ultimate GPS](https://www.digikey.com/product-detail/es/adafruit-industries-llc/746/1528-1153-ND/5353613)
+- [SIM7600CE-T 4G(LTE) Arduino Shield](https://www.mouser.com/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA==)
+
 ## Schematic ##
 
 ![alt text](./img/Schematic_Buoy_A.png "Schematic")
+
+[For a detailed explanation of the schematic visit the following log.](https://hackaday.io/project/173457/log/181830-buoy-a-v10-schematic-and-pcb-design)
 
 ## PCB Layout ##
 
@@ -50,12 +62,51 @@ Components List:
 22. [RFM95W LoRa Radio](https://www.digikey.com/product-detail/es/adafruit-industries-llc/3072/1528-1667-ND/6005357)
 23. [SIM7600CE-T 4G(LTE) Arduino Shield](https://www.mouser.com/ProductDetail/DFRobot/TEL0124?qs=17u8i%2FzlE88MEbXRJuYFsA==)
 
+[For a detailed Bill of Materials visit the following log.](https://hackaday.io/project/173457/log/183798-buoy-a-v10-bill-of-materials)
+
+[For a detailed explanation about the soldering and assembly procedure visit the following log.](https://hackaday.io/project/173457/log/183738-buoy-a-v10-assembly)
+
 ## Wiring Diagrams ##
+
+The following diagrams present the physical connections of the different boards and components of the Buoy A V1.0.
+
+### Battery Management ###
+
+The original design of the board considered the following components:
+
+- Battery (5V < Voltage < 15V)
+- PCB Board Buoy A V1.0
+- Buck Converter
+- Switch
+- Extra capacitor
 
 ![alt text](./Wiring_Diagrams/Wiring_Buoy_WithGSM_02_wired.png "Buck Converter")
 
+Similar to Buoy B, there is an alternative for the battery management, is possible to provide the required voltages with a boost converter and a 3.7V Battery, like the following example:
+
+- 3.7V 1 Cell Battery
+- PCB Board Buoy A V1.0
+- Boost Converter
+- Micro USB Breakout Board
+- Switch
+- Extra capacitor
+- JST-XH 2 Pos female connector and a JST-XH 2 Pos male connector
+- 5V Charger (only used to charge the battery)
+
 ![alt text](./Wiring_Diagrams/Wiring_Buoy_WithGSM_01_wired.png "Boost Converter")
+
+This alternative is valid and possible, but is not ideal for longer working time (compared to the first one). It is important to consider the efficiency of the boost converter. The selected boost converter will have a voltage drop at a current higher than 500mA, that should be taken into consideration.
+
+### Motors ###
+
+The board was designed to handle 2 different types of motors, those are:
+
+- Servo Motor
 
 ![alt text](./Wiring_Diagrams/Wiring_Buoy_WithGSM_03_wired.png "Servo Motor")
 
+- DC Motor (using the driver TB6612FNG)
+
 ![alt text](./Wiring_Diagrams/Wiring_Buoy_WithGSM_04_wired.png "DC Motor")
+
+[For more information about the wiring diagrams and the project visit the following log.](https://hackaday.io/project/173457/log/182856-buoy-a-v10-wiring-diagrams)
