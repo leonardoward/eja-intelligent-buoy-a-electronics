@@ -6,6 +6,19 @@ Buoy A is a 141.73 mm x 54.86 mm PCB that integrates 5 main modules (ESP32, LoRa
 
 This repository contains the KiCad design for the PCB of the Intelligent Buoy A. It also contains the 3D models used to visualize the design in the KiCad 3D viewer.
 
+## Context
+
+**EJA** is a pop‑up recovery buoy for lost fishing gear. A buoy sits on the seabed
+attached to a trap or net; a scheduled timer (or a command over LoRa from the
+[Onboard Gateway](https://github.com/leonardoward/eja-onboard-gateway-electronics))
+releases it, it floats up, and its GPS position is reported so the gear can be
+recovered. **Buoy A** is the fuller variant &mdash; it adds a **TB6612FNG** motor driver
+for the release actuator and an optional **SIM7600 GSM/GPRS** shield for a cellular
+uplink where there is coverage. It runs the
+[Buoy firmware](https://github.com/leonardoward/eja-intelligent-buoy-b-firmware).
+The single‑board successor that folds this whole system onto one PCB is
+[EJA M](https://github.com/leonardoward/eja-m-pcb-design).
+
 ![alt text](./img/Buoy_A_WithGSM_01.png "Front Layer PCB")
 
 ![alt text](./img/Buoy_A_WithGSM_03.png "Back Layer PCB")
@@ -114,3 +127,18 @@ The board was designed to handle 2 different types of motors, those are:
 ## Future improvements ##
 
 [For more information about the recommended future improvements for the electronic design visit the following log.](https://hackaday.io/project/173457/log/183807-future-improvements-pcb-design)
+
+## Repository Layout
+
+```
+Buoy_WithGSM.sch / .kicad_pcb        KiCad 5 project (schematic + board)
+Buoy_WithGSM.pro / .net              project + netlist
+Symbols/  Footprints/  3D/  step/    project-local libraries and 3D models
+Gerber/                              fabrication output
+Assembly/                            assembly reference photos
+Wiring_Diagrams/                     board-to-component wiring (battery, servo, DC motor)
+pdf/  plot/                          exported schematic / layout PDFs
+img/                                 renders and photos used in this README
+LICENSE                              Apache 2.0
+```
+
